@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Donors Detail{% endblock %}
+{% block body %}
+    <section id="doctor-team" class="section-padding">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12">
+          <h2 class="ser-title">Our Donors Detail!</h2>
+          <hr class="botm-line">
+        </div>
+        {% for d in donors %}
+        <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="thumbnail">
+            <img src='/media/{{d.img}}'  alt="..." class="team-img">
+            <div class="caption">
+              <h3>{{d.name}}</h3>
+              <p>Blood Group:{{d.blood_group}}</p>
+               <p>Address: {{d.address}}</p>
+               <p>Contact no.: {{d.contact_no}}</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      {% if forloop.counter|divisibleby:4 %}
+          </div> <div class="row">
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  </section>
+{% endblock %}
