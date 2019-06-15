@@ -10,8 +10,10 @@ def login(request):
         user = auth.authenticate(username=uname, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('/donor/service')
-    return render(request, 'login.html', {'error': "User not exist"})
+            return redirect('/donor/', {'user': uname})
+        else:
+            return render(request, 'login.html', {'error': "User not exist"})
+    return render(request, 'login.html')
 
 
 def register(request):
@@ -34,9 +36,10 @@ def register(request):
         else:
             return render(request, 'register.html', {'error': "Password mismatched"})
     else:
-        return render(request, 'register.html', {'error': "User added successfully"})
+        return render(request, 'register.html')
 
 
 def logout(request):
-    return render(request, 'logout.html')
+    auth.logout(request)
+    return redirect('/donor')
 
