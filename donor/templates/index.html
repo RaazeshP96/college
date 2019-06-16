@@ -29,12 +29,6 @@
                       </div>
 
                       {% if user.is_authenticated %}
-                      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                          <strong>Hello {{user}}!</strong> Welcome to Blood Donation Information management system
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
                          <nav class="navbar navbar-default navbar-fixed-top">
                             <div class="container">
                               <div class="col-md-12">
@@ -49,7 +43,7 @@
                                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                                   <ul class="nav navbar-nav">
                                     <li class=""><a href="/donor">Home</a></li>
-
+                                    <li class=""><a href="/donor/donate">Donate</a></li>
                                     <li class=""><a href="/donor/reciever">Reciever Views</a></li>
                                     <li class=""><a href="/donor/donor">Donor views</a></li>
                                     <li class=""><a href="/donor/contact">Contact</a></li>
@@ -60,6 +54,12 @@
                               </div>
                             </div>
                           </nav>
+                       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                          <strong>Hello {{user}}!</strong> Welcome to Blood Donation Information management system
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
                       {% else %}
                       <div class="banner-text text-center">
                           <a href="/account/login" class="btn btn-lg btn-primary">Login </a>

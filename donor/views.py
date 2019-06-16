@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Donor
+from .form import   DonorForm
 
 
 def index(request):
@@ -37,3 +38,14 @@ def donate(request):
         pass1 = request.POST['password1']
         pass2 = request.POST['password2']
     return render(request, 'account/register.html')
+
+
+def forms(request):
+    form = DonorForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    content = {
+        'form': form
+    }
+    return render(request, 'form.html', content)
+
