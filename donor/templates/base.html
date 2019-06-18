@@ -12,17 +12,9 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  <!-- =======================================================
-    Theme Name: Medilab
-    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-  <!--banner-->
-
       <nav class="navbar navbar-default navbar-sticky-top">
         <div class="container">
           <div class="col-md-12">
@@ -55,17 +47,21 @@
 
   <!--/ service-->
   <!--cta-->
+
   <section id="cta-1" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="schedule-tab">
           <div class="col-md-4 col-sm-4 bor-left">
             <div class="mt-boxy-color"></div>
+
             <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
+              <h3>{{ename}}</h3>
+              <h5>{[address}}</h5>
+              <h6>Hurry up Only {{enow}} left</h6>
+              <p>{{edesc}}</p>
             </div>
+
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="medi-info">
@@ -126,10 +122,6 @@
       </div>
     </div>
   </section>
-  <!--cta-->
-  <!--contact-->
-  <!--/ contact-->
-  <!--footer-->
   <footer id="footer">
     <div class="top-footer">
       <div class="container">

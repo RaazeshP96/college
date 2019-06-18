@@ -1,9 +1,9 @@
 from django.db import models
-from  django.contrib import admin
 from django.contrib.auth.models import User
 
 
 class Donor(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     name = models.CharField(max_length=50)
     address = models.CharField(max_length=80)
     dob = models.DateField()
@@ -28,6 +28,18 @@ class Donor(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Event(models.Model):
+    event_name = models.CharField(max_length=30)
+    event_address = models.CharField(max_length=50)
+    event_date = models.DateField()
+    organised_by = models.CharField(max_length=30)
+    description = models.TextField(max_length=300)
+
+    def __str__(self):
+        return self.event_name
+
 
 
 

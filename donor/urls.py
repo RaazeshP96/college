@@ -9,4 +9,5 @@ urlpatterns = [
     path('donate/', views.forms),
     path('contact/', views.contact),
     path('reciever/', views.reciever),
+    path('event/', views.events),
 ]
