@@ -5,6 +5,7 @@ body {
 	color: #999999;
 	font-size: 300;
 	font-size: 16px;
+	background-color:#0D5C63;
 }
 ol, ul {
 	list-style: none;
@@ -51,7 +52,7 @@ hr.botm-line {
     margin: 20px 0 20px 0;
 }
 
-/***************************************
+/***************************************py
 banner
 ***************************************/
 .navbar {
